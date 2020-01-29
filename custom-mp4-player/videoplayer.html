@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="vpstyles.css" rel="stylesheet"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="frame"></div>
+
+		<div id="main">
+			<!--Video-->
+			<div id="videopanel">
+				<video id="myVideo" src="outro.mp4" type="mp4"></video>
+			</div>
+
+			<div id="controls">
+				<div id="seek-bar">
+					<div id="fill"></div>
+				</div>
+
+				<table border="0">
+					<tr>
+						<td width="55%">
+							<div id="currentTime">00:00 / 00:00</div>
+						</td>
+
+						<td width="30%">
+							<img src="Play.png" onclick="playOrPause()" id="playBtn" width="20%" />
+						</td>
+
+						<td>
+							<img src="Speaker.png" id="speaker" style="width: 20px; margin-top: 7px;"/>
+						</td>
+
+						<td>
+							<input type="range" id="volume" min="0" max="1" value="0.40" step="0.20" onchange="changeVolume()"/>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+		<script src="videoplayer.js"></script>
+	</body>
+</html>
