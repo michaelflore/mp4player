@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A custom MP4 video player made with HTML, Sass, and JavaScript">
+	<meta name="author" content="Michael Flores">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MP4 Player</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+			integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+			integrity="sha256-jnOjDTXIPqall8M0MyTSt98JetJuZ7Yu+1Jm7hLTF7U=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div class="top-info">
+			Uncut MP4 Video Player
+		</div>
+
+		<div class="video-player">
+			<div class="video-topBar">
+				Video of Anime.
+			</div>
+			<!--Video-->
+			<video>
+				<source src="doh.mp4" type="video/mp4">
+			</video>
+			<!--Video Controls-->
+			<div class="video-controls">
+
+				<div class="video-top-controls">
+					<div class="video-seekBar seekBar">
+						<span class="progress"></span>
+					</div>
+				</div>
+
+				<div class="video-playback-controls">
+
+					<button class="control-btn toggle-play-pause play">
+						<i class="fas fa-play play-icon icon"></i>
+						<i class="fas fa-pause pause-icon icon"></i>
+					</button>
+
+					<div class="video-volume-control">
+						<button class="control-btn toggle-volume on">
+							<i class="fas fa-volume-up icon volume-on"></i>
+							<i class="fas fa-volume-mute icon volume-off"></i>
+						</button>
+						<div class="volume-seekBar seekBar">
+							<span class="progress"></span>
+						</div>
+					</div>
+
+					<div class="video-timings">
+						<div class="start-time time">00:00:00</div>
+						|
+						<div class="end-time time">00:00:00</div>
+					</div>
+				</div>
+
+				<!--End of Video Controls-->
+			</div>
+			<!--End of Video Player-->
+		</div>
+		<!--End of Container-->
+	</div>
+
+	<script src="script.js"></script>
+	<noscript>Please enable scripts in your browser.</noscript>
+</body>
+</html>
