@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap");
 :root {
-  --player-background: #ec0e5a;
-  --player-foreground: #edf2f4;
-  --player-controls: black;
-  --hover-color: #8c0835;
+  --player-background: #1a1920;
+  --player-foreground: #694ba1;
+  --player-controls: #edf2f4;
+  --hover-color: black;
   --font-family: "Roboto", sans-serif;
 }
 
 html, body {
   margin: 0;
   height: 100%;
-  background-color: #f66a9a;
+  background-color: #494659;
 }
 
 .container {

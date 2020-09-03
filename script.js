@@ -32,12 +32,9 @@ $(document).ready(function () {
 
         //Update
         const updateSeekBar = () => {
-            seekPercentage = helper_getPercentage(
-                currentTime, totalDurationInSeconds
-            );
-            $(eleVideoProgress).css({
-                width: `${seekPercentage}`
-            });
+            seekPercentage = helper_getPercentage(currentTime, totalDurationInSeconds);
+
+            $(eleVideoProgress).css({width: `${seekPercentage}%`});
         };
 
         const updateVolumeBar = () => {
@@ -98,7 +95,7 @@ $(document).ready(function () {
             $(eleToggleVolume).toggleClass('on off');
         });
 
-        $(eleVolumeSeekBar).on('click', e => {
+        $(eleVolumeSeekBar).on('click', (e) => {
             let tempPos = e.pageX - videoPlayer.offsetLeft - eleVolumeSeekBar['0'].offsetLeft;
             let tempValue = tempPos / eleVolumeSeekBar['0'].clientWidth;
 
@@ -110,7 +107,7 @@ $(document).ready(function () {
                 .removeClass('off');
         });
 
-        $(eleVideoSeekBar).on('click', e => {
+        $(eleVideoSeekBar).on('click', (e) => {
            let tempPos = e.pageX - videoPlayer.offsetLeft - eleVideoSeekBar['0'].offsetLeft;
            let tempValue = tempPos / eleVideoSeekBar['0'].clientWidth;
            eleVideoObj['0'].currentTime = tempValue * totalDurationInSeconds;
@@ -119,14 +116,14 @@ $(document).ready(function () {
 });
 
 const helper_getPercentage = (presentTime, totalTime) => {
-    var calcPercentage = (presentTime / totalTime) * 100;
+    let calcPercentage = (presentTime / totalTime) * 100;
     return parseFloat(calcPercentage.toString());
 };
 
-const helper_calculateDuration = duration => {
-    var seconds = parseInt(duration % 60);
-    var minutes = parseInt((duration % 3600) / 60);
-    var hours = parseInt(duration / 3600);
+const helper_calculateDuration = (duration) => {
+    let seconds = parseInt(duration % 60),
+        minutes = parseInt((duration % 3600) / 60),
+        hours = parseInt(duration / 3600);
 
     return {
       hours: helper_pad(hours),
@@ -135,7 +132,7 @@ const helper_calculateDuration = duration => {
     };
 };
 
-const helper_pad = number => {
+const helper_pad = (number) => {
     if(number > -10 && number < 10) {
         return '0' + number;
     }
