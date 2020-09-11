@@ -6,7 +6,7 @@
 	<meta name="description" content="A custom MP4 video player made with HTML, Sass, and JavaScript">
 	<meta name="author" content="Michael Flores">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>MP4 Player</title>
+	<title>VideoScribe MP4 Player</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
 			integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
@@ -19,15 +19,13 @@
 <body>
 	<div class="container">
 
-		<div class="top-info"> Premiere </div>
+		<div class="top-info"> VideoScribe </div>
 
 		<div class="video-player">
-			<div class="video-topBar">
-				Asterisk War
-			</div>
+			<div class="video-topBar"> Asterisk War </div>
 			<!--Video-->
 			<video>
-				<source src="doh.mp4" type="video/mp4">
+				<source src="video/doh.mp4" type="video/mp4">
 			</video>
 			<!--Video Controls-->
 			<div class="video-controls">
@@ -56,11 +54,12 @@
 					<div class="video-timings">
 						<div class="start-time time">00:00:00</div> / <div class="end-time time">00:00:00</div>
 					</div>
+
+					<div class="full-screen"><i class="fas fa-expand"></i></div>
 				</div>
 
 			</div> <!--End of Video Controls-->
 		</div> <!--End of Video Player-->
-
 	</div> <!--End of Container-->
 
 	<script src="script.js"></script>

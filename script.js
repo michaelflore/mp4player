@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $('.video-player').each(function (_, videoPlayer) {
+    $('.video-player').each(function (index, videoPlayer) {
+
         //Select all the controls
-        let eleVideoObj = $(videoPlayer).find('video');
+        let videoElement = $(videoPlayer).find('video');
         let elePlayPauseBtn = $(videoPlayer).find('.toggle-play-pause');
         let eleStartTime = $(videoPlayer).find('.start-time');
         let eleEndTime = $(videoPlayer).find('.end-time');
@@ -24,7 +25,7 @@ $(document).ready(function () {
         $(videoPlayer).hover(
             () => $(videoPlayer).removeClass('hide-controls'),
             () => {
-                if(!eleVideoObj['0'].paused) {
+                if(!videoElement['0'].paused) {
                     $(videoPlayer).addClass('hide-controls');
                 }
             }
@@ -54,28 +55,28 @@ $(document).ready(function () {
         };
 
         //Update each function
-        eleVideoObj.on('loadeddata', () => {
-            totalDurationInSeconds = eleVideoObj['0'].duration;
+        videoElement.on('loadeddata', () => {
+            totalDurationInSeconds = videoElement['0'].duration;
             totalDuration = helper_calculateDuration(totalDurationInSeconds);
             updateTotalDuration();
             updateSeekBar();
             updateVolumeBar();
         });
 
-        eleVideoObj.on('timeupdate', () => {
-            currentTime = eleVideoObj['0'].currentTime;
+        videoElement.on('timeupdate', () => {
+            currentTime = videoElement['0'].currentTime;
             currentDuration = helper_calculateDuration(currentTime);
             updateCurrentTime();
             updateSeekBar();
         });
 
-        eleVideoObj.on('volumechange', () => {
-            volumePercentage = eleVideoObj['0'].volume * 100;
+        videoElement.on('volumechange', () => {
+            volumePercentage = videoElement['0'].volume * 100;
             updateVolumeBar();
         });
 
-        eleVideoObj.on('ended', () => {
-            eleVideoObj['0'].currentTime = 0;
+        videoElement.on('ended', () => {
+            videoElement['0'].currentTime = 0;
             $(elePlayPauseBtn)
                 .removeClass('pause')
                 .addClass('play');
@@ -84,14 +85,12 @@ $(document).ready(function () {
 
         //User events
         $(elePlayPauseBtn).on('click', () => {
-            $(elePlayPauseBtn).hasClass('play')
-                ? eleVideoObj['0'].play()
-                : eleVideoObj['0'].pause();
+            $(elePlayPauseBtn).hasClass('play') ? videoElement['0'].play() : videoElement['0'].pause();
             $(elePlayPauseBtn).toggleClass('play pause');
         });
 
         $(eleToggleVolume).on('click', () => {
-            eleVideoObj['0'].volume = eleVideoObj['0'].volume ? 0: volumeValue;
+            videoElement['0'].volume = videoElement['0'].volume ? 0: volumeValue;
             $(eleToggleVolume).toggleClass('on off');
         });
 
@@ -100,7 +99,7 @@ $(document).ready(function () {
             let tempValue = tempPos / eleVolumeSeekBar['0'].clientWidth;
 
             volumeValue = tempValue;
-            eleVideoObj['0'].volume = tempValue.toFixed(1);
+            videoElement['0'].volume = tempValue.toFixed(1);
             volumePercentage = tempValue.toFixed(1) * 100;
             $(eleToggleVolume)
                 .addClass('on')
@@ -110,10 +109,22 @@ $(document).ready(function () {
         $(eleVideoSeekBar).on('click', (e) => {
            let tempPos = e.pageX - videoPlayer.offsetLeft - eleVideoSeekBar['0'].offsetLeft;
            let tempValue = tempPos / eleVideoSeekBar['0'].clientWidth;
-           eleVideoObj['0'].currentTime = tempValue * totalDurationInSeconds;
+           videoElement['0'].currentTime = tempValue * totalDurationInSeconds;
         });
+
     });
 });
+
+//Full Screen
+document.getElementsByClassName('full-screen')[0].addEventListener('click', function () {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+    else {
+        document.getElementsByClassName('video-player')[0].requestFullscreen();
+    }
+});
+
 
 const helper_getPercentage = (presentTime, totalTime) => {
     let calcPercentage = (presentTime / totalTime) * 100;

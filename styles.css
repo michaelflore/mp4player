@@ -52,7 +52,7 @@ html, body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 .video-player video {
-  max-width: 100%;
+  width: 100%;
 }
 .video-topBar {
   position: absolute;
@@ -159,11 +159,17 @@ html, body {
   font-size: 14px;
   font-weight: 600;
   margin-left: auto;
-  padding: 0 4px;
 }
 .video-controls .video-timings .time {
   width: 70px;
   text-align: center;
+}
+.video-controls .full-screen {
+  cursor: pointer;
+  margin: 0 1rem;
+}
+.video-controls .fa-expand {
+  color: var(--player-foreground);
 }
 
 /*# sourceMappingURL=styles.css.map */
