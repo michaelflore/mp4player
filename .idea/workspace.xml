@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa506fe1-42ba-4550-aeea-989fa731d300" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/225.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/225.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/doh.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/doh.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-mp4-player/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake/snake.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +22,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael F\WebstormProjects\mp4player\video" />
       <recent name="C:\Users\Michael F\WebstormProjects\mp4player" />
     </key>
   </component>
@@ -65,24 +60,52 @@
       <workItem from="1585341275720" duration="7896000" />
       <workItem from="1596905453584" duration="55000" />
       <workItem from="1599102013757" duration="148000" />
+      <workItem from="1599102553875" duration="998000" />
+      <workItem from="1599685930271" duration="1708000" />
+      <workItem from="1599856137096" duration="697000" />
+      <workItem from="1599857589931" duration="913000" />
     </task>
+    <task id="LOCAL-00001" summary="Change color scheme">
+      <created>1599103454796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599103454796</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Final Changes.">
+      <created>1599858326714</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599858326714</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change color scheme" />
+    <MESSAGE value="Final Changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Changes." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="425" y="23" key="CommitChangelistDialog2" timestamp="1599102157901">
+    <state x="425" y="23" key="CommitChangelistDialog2" timestamp="1599858323109">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1599102157901" />
-    <state x="434" y="208" key="EditFileWatcherDialog" timestamp="1596905492698">
+    <state x="425" y="23" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1599858323109" />
+    <state x="434" y="208" key="EditFileWatcherDialog" timestamp="1599102647070">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="434" y="208" key="EditFileWatcherDialog/0.0.1600.860@0.0.1600.860" timestamp="1596905492698" />
+    <state x="434" y="208" key="EditFileWatcherDialog/0.0.1600.860@0.0.1600.860" timestamp="1599102647070" />
     <state x="301" y="72" key="SettingsEditor" timestamp="1596905494308">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1596905494308" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1599858355691">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1599858355691" />
   </component>
 </project>
